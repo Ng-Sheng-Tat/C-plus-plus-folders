@@ -1,0 +1,6 @@
+﻿  test.cpp
+D:\Cpp Code\test\graphics.h(41,59): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+D:\Cpp Code\test\graphics.h(42,59): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+D:\Cpp Code\test\graphics.h(211,13): warning C4244: '*=': conversion from 'double' to 'SHORT', possible loss of data
+D:\Cpp Code\test\graphics.h(212,13): warning C4244: '*=': conversion from 'double' to 'SHORT', possible loss of data
+  test.vcxproj -> D:\Cpp Code\test\Debug\test.exe

@@ -1,0 +1,1127 @@
+Working with Variables
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  cout << "Hello World!"<< "by someone" << endl;
+  cout << "\nSomeother stuff";
+  cout << endl;
+  cout << "\n";
+  cout << "\n";
+  cout << "\n";
+  int x = 4.7;
+  int y = 5;
+  int z = 4.3;
+  cout << x << z;
+  string variablename1;
+  variablename1 = "This is a string";
+  cout << variablename1;
+  bool variablename2, variablename3;
+  variablename2 = true;
+  variablename3 = false;
+  float variablename4 = 5.3;
+  char variablename5 = 's';
+  //character must be of one characters and must of single quotation marks
+  return 0;
+}
+
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  // this is a constant
+  const float pie = 3.142;
+  cout << "this is the constant pie value of " << pie;
+  cout << "\n";
+
+  float v;
+  cout << "Please insert a decimal number: " << "\n";
+  cin >> v;
+  cout << "You have inserted " << v;
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  // String concatenation
+  string variablename1, variablename2;
+  cin >> variablename1;
+  cout << "\n";
+  cin >> variablename2;
+  cout << "\n";
+  string variablenametotal = variablename1.append(variablename2);
+  cout << variablenametotal;
+
+  string myname = "ngshengtat";
+  cout << "my name length is " << myname.length();
+  cout << "\n";
+  cout << "my name is also " << myname.size();
+  // Element Assessing
+  cout << myname[0];
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  // C++ math
+  float number1, number2;
+  cout << "Please insert a number: " << endl;
+  cin >> number1;
+  cout << endl;
+  cout << "Please insert another number: " << endl;
+  cin >> number2;
+  cout << endl;
+  cout << max(number1, number2) << endl;
+  cout << min(number1, number2) << endl;
+  cout << sqrt(number1) << endl;
+  cout << round(number2) << endl;
+  // This is ln, natural logarithm
+  cout << log(number1+number2);
+
+  return 0;
+}
+________________________________________________________________________________
+// If Else statement
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  int numbervariable;
+  cout << "Please enter a number: ";
+  cin >> numbervariable;
+  if (numbervariable < 50) {
+    cout << "This is a small number.";
+  } else if (numbervariable == 50) {
+    cout << "This number is a 50 number";
+  } else {
+    cout << "This is a big number.";
+  }
+
+
+  return 0;
+}
+________________________________________________________________________________
+// Switch statement operators
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  int day = 4;
+switch (day) {
+  case 1:
+    cout << "Monday";
+    break;
+  case 2:
+    cout << "Tuesday";
+    break;
+  case 3:
+    cout << "Wednesday";
+    break;
+  case 4:
+    cout << "Thursday";
+    break;
+  case 5:
+    cout << "Friday";
+    break;
+  case 6:
+    cout << "Saturday";
+    break;
+  case 7:
+    cout << "Sunday";
+    break;
+  // no multiple similar case is applicable
+  // without the break statement, all the subsequent code will be applied without checking the condition and the break statement anymore
+
+  cout << endl << "Somethinghere";
+}
+
+
+  return 0;
+}
+________________________________________________________________________________
+// While Loops
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  float variablename1;
+  cout << "Please enter a number: ";
+  cin >> variablename1;
+  float variablename2 = variablename1;
+  cout << endl;
+
+  while (variablename1<10) {
+    cout << variablename1 << endl;
+    variablename1 ++;
+  }
+  cout << "Current variable value: " << variablename1 << endl;
+
+  variablename1 += 1;
+  cout << "This is outside the loops: " << variablename1 << endl;
+  cout << endl;
+  do {
+    cout << variablename2 << endl;
+    variablename2 += 1;
+  }
+  while (variablename2 < 10);
+  cout << "Current variable value: " << variablename2 << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+// While Loops
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  float variablename1;
+  cout << "Please enter a number: ";
+  cin >> variablename1;
+  float variablename2 = variablename1;
+  cout << endl;
+
+  while (variablename1<10) {
+    cout << variablename1 << endl;
+    variablename1 ++;
+  }
+  cout << "Current variable value: " << variablename1 << endl;
+
+  variablename1 += 1;
+  cout << "This is outside the loops: " << variablename1 << endl;
+  cout << endl;
+  do {
+    cout << variablename2 << endl;
+    variablename2 += 1;
+  }
+  while (variablename2 < 10);
+  cout << "Current variable value: " << variablename2 << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+// For Loops
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  // Initialization, execute one time onel
+  // condition to be checked
+  // what to do to end the for loops
+  int i = 5;
+  for (i; i <=10; i+=1) {
+    cout << i << endl;
+    cout << "This is the " << i << "output" << endl;
+  }
+
+  int l = 5;
+  for (l; l <=15; l++) {
+    if (l==10) {
+      continue;
+    } else if (l==12) {
+      break;
+    } else {
+      cout << "This is " << l << " value" << endl;
+    }
+    cout << "This is " << l << " value" << endl;
+
+  }
+  // Break and Continue more oftenly used for while and do while loops more effectively
+  // notes on the examples in the w3schools tutorials
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  // Initialization, execute one time onel
+  // condition to be checked
+  // what to do to end the for loops
+  int i = 5;
+  for (i; i <=10; i+=1) {
+    cout << i << endl;
+    cout << "This is the " << i << "output" << endl;
+  }
+
+  int l = 5;
+  for (l; l <=15; l++) {
+    if (l==10) {
+      continue;
+    } else if (l==12) {
+      break;
+    } else {
+      cout << "This is " << l << " value" << endl;
+    }
+    cout << "This is " << l << " value" << endl;
+
+  }
+  // Break and Continue more oftenly used for while and do while loops more effectively
+  // notes on the examples in the w3schools tutorials
+  return 0;
+}
+________________________________________________________________________________
+// Arrays
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  // Arrays must be of the same data types
+  string phone[5] = {"Iphone", "Vivo", "Oppo"};
+  int values[] = {123,456,789}; // For undefined arays length
+  cout << phone[0] << endl;
+  cout << values[1] << endl;
+  phone[0] = "HuaWei";
+  cout << phone[0] << endl;
+  string greatpeople[5] = {"Elon Musk", "Nikola Tesla", "Albeit Einstein", "John Dalton"};
+  // "=" is for variable assignment and assignation
+  int i = 1;
+  for (i; i<=3; i+=1) {
+    cout << "Scientific person " << i << greatpeople[i] << endl;
+  }
+
+  return 0;
+}
+________________________________________________________________________________
+// Pointers and Memories
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  // references using the references &
+  string favouritecar = "Mazda";
+  string &transport = favouritecar;
+  cout << "My favourite transport is " << favouritecar << " which is also my favourite car , which is " << transport << endl;
+  cout << "the memory address of the variable favouritecar is " << &favouritecar << endl;
+  cout << "the pointer of transport is also is the same as the favouritecar in the memory storage location which is " << &transport << endl;
+  // A pointer however, is a variable that stores the memory address as its value.
+  string favouritecolor = "Green";
+  string* memoryaddressforfavouritecolor = &favouritecolor;
+  cout << favouritecolor << endl;
+  cout << &favouritecolor << endl;
+  cout << memoryaddressforfavouritecolor << endl;
+  cout << endl;
+  // Using the pointer of the memory address to get the stored variables values
+  cout << *memoryaddressforfavouritecolor << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+// C++ pointers
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+  // changing the variables name by using the pointers and the memory address
+  string breakfast = "Bread";
+  string* memoryaddressforbreakfast = &breakfast;
+  cout << "Variables Stored: " << breakfast << endl;
+  cout << "Memories Address: " << memoryaddressforbreakfast << endl;
+  cout << "Memories Address: " << &breakfast << endl;
+  cout << endl;
+  // This is possible
+  *memoryaddressforbreakfast = "sourdough";
+  cout << "Variables Stored: " << breakfast << endl;
+  cout << "Memories Address: " << memoryaddressforbreakfast << endl;
+  cout << "Memories Address: " << &breakfast << endl;
+  cout << endl;
+
+  /* This is not possible
+  memoryaddressforbreakfast = "sourdough";
+  cout << "Variables Stored: " << breakfast << endl;
+  cout << "Memories Address: " << memoryaddressforbreakfast << endl;
+  cout << "Memories Address: " << &breakfast << endl;
+  cout << endl;  */
+
+  /* This is not possible
+  &breakfast = "egg-fried-rice";
+  cout << "Variables Stored: " << breakfast << endl;
+  cout << "Memories Address: " << memoryaddressforbreakfast << endl;
+  cout << "Memories Address: " << &breakfast << endl;
+  cout << endl; */
+
+  return 0;
+}
+________________________________________________________________________________
+// C++ Functions
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+void functionname1() {
+  cout << "This function will not return anything by using the key word void.";
+  cout << endl;
+  cout << endl;
+}
+
+void parameterfunction(string firstname, string lastname, int age) {
+  cout << "First name: " << firstname << endl;
+  cout << "Last name: " << lastname << endl;
+  cout << "Age: " << age << endl;
+  cout << endl;
+}
+
+void defaultparameterfunction(string cars = "protons", int carAge=1) {
+  // if one of the numbers is given default values, all other parameters must be given as welll
+  cout << "Carname: " << cars << endl;
+  cout << "Carage: " << carAge << endl;
+  cout << endl;
+}
+
+// functions with return values
+float functionsummation(int x=5, float y=4.9) {
+  cout << "The number x: " << x << endl;
+  cout << "The number y: " << y << endl;
+  cout << endl;
+  return x + y;
+}
+
+// function overloading, with two functions with the same name but without different data types of returning
+int multiplicationfunction(int x, int y) {
+  return x*y;
+}
+
+double multiplicationfunction(double x, double y) {
+  return x*y;
+}
+
+
+int main() {
+  // C++ functions
+  // void means that the function does not have a return value.
+  functionname1();
+  functionname1();
+
+  parameterfunction("Joe", "Doe", 25);
+  parameterfunction("Henry", "Walker", 37);
+
+  defaultparameterfunction("wolkswagen", 2);
+  defaultparameterfunction();
+  // If one of it is given, all others must be given as well
+  // defaultparameterfunction( , 2);
+
+  functionsummation();
+  cout << functionsummation() << endl;
+  functionsummation(4,9.5);
+  cout << functionsummation(4,9.5) << endl;
+
+  int x = functionsummation(9,9.9);
+  cout << x << endl;
+
+  // Cannot initialize the same variable twice, that means data type and structure is not ammendable / changeable / mutable right after initialization
+  float y = functionsummation(9,9.9);
+  cout << y << endl;
+
+  int answer1 = multiplicationfunction(8, 5);
+  double answer2 = multiplicationfunction(4.3, 6.26);
+  //double answer3 = multiplicationfunction(4.3, 6);
+  cout << "Int: " << answer1 << "\n";
+  cout << "Double: " << answer2 << endl; // stand for end line;
+  // hybrid is not possible
+  //cout << "Hybrid: " << answer3 << endl;
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+void functionname1() {
+  cout << "This function will not return anything by using the key word void.";
+  cout << endl;
+  cout << endl;
+}
+
+void parameterfunction(string firstname, string lastname, int age) {
+  cout << "First name: " << firstname << endl;
+  cout << "Last name: " << lastname << endl;
+  cout << "Age: " << age << endl;
+  cout << endl;
+}
+
+void defaultparameterfunction(string cars = "protons", int carAge=1) {
+  // if one of the numbers is given default values, all other parameters must be given as welll
+  cout << "Carname: " << cars << endl;
+  cout << "Carage: " << carAge << endl;
+  cout << endl;
+}
+
+// functions with return values
+float functionsummation(int x=5, float y=4.9) {
+  cout << "The number x: " << x << endl;
+  cout << "The number y: " << y << endl;
+  cout << endl;
+  return x + y;
+}
+
+// function overloading, with two functions with the same name but without different data types of returning
+int multiplicationfunction(int x, int y) {
+  return x*y;
+}
+
+double multiplicationfunction(double x, double y) {
+  return x*y;
+}
+
+
+int main() {
+  // C++ functions
+  // void means that the function does not have a return value.
+  functionname1();
+  functionname1();
+
+  parameterfunction("Joe", "Doe", 25);
+  parameterfunction("Henry", "Walker", 37);
+
+  defaultparameterfunction("wolkswagen", 2);
+  defaultparameterfunction();
+  // If one of it is given, all others must be given as well
+  // defaultparameterfunction( , 2);
+
+  functionsummation();
+  cout << functionsummation() << endl;
+  functionsummation(4,9.5);
+  cout << functionsummation(4,9.5) << endl;
+
+  int x = functionsummation(9,9.9);
+  cout << x << endl;
+
+  // Cannot initialize the same variable twice, that means data type and structure is not ammendable / changeable / mutable right after initialization
+  float y = functionsummation(9,9.9);
+  cout << y << endl;
+
+  int answer1 = multiplicationfunction(8, 5);
+  double answer2 = multiplicationfunction(4.3, 6.26);
+  //double answer3 = multiplicationfunction(4.3, 6);
+  cout << "Int: " << answer1 << "\n";
+  cout << "Double: " << answer2 << endl; // stand for end line;
+  // hybrid is not possible
+  //cout << "Hybrid: " << answer3 << endl;
+  return 0;
+}
+________________________________________________________________________________
+// Parent
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  public:
+    int age;
+    string firstname;
+    string lastname;
+};
+
+int main() {
+  parentclassname parentobjectname1;
+
+  parentobjectname1.age = 15;
+  parentobjectname1.firstname = "Joe";
+  parentobjectname1.lastname = "Doe";
+
+  // Print values
+  cout << "My first name is " << parentobjectname1.firstname  << endl;
+  cout << "My last name is " << parentobjectname1.lastname  << endl;
+  cout << "My age is " << parentobjectname1.age << endl;
+
+  cout << endl;
+
+  parentclassname parentobjectname2;
+
+  parentobjectname2.age = 20;
+  parentobjectname2.firstname = "Kelvins";
+  parentobjectname2.lastname = "Celcius";
+
+  cout << "My first name is " << parentobjectname2.firstname  << endl;
+  cout << "My last name is " << parentobjectname2.lastname  << endl;
+  cout << "My age is " << parentobjectname2.age << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  public:
+    int age;
+    string firstname;
+    string lastname;
+
+    // Construction, which calls by itself for evertime of execution, must use the class name as the function name
+    // This function is not possible for object assignation
+    parentclassname() {
+      cout << "My age is " << age << endl;
+      cout << "This is an automatic function. " << endl;
+      cout << endl;
+    }
+
+    void parentmethod1() {
+      cout << "My name is " << firstname <<" " << lastname << endl;
+    }
+};
+
+int main() {
+  parentclassname parentobjectname1;
+
+  parentobjectname1.age = 15;
+  parentobjectname1.firstname = "Joe";
+  parentobjectname1.lastname = "Doe";
+
+  // Print values
+  cout << "My first name is " << parentobjectname1.firstname  << endl;
+  cout << "My last name is " << parentobjectname1.lastname  << endl;
+  cout << "My age is " << parentobjectname1.age << endl;
+
+  cout << endl;
+
+  parentobjectname1.parentmethod1();
+
+
+  cout << endl;
+
+  parentclassname parentobjectname2;
+
+  parentobjectname2.age = 20;
+  parentobjectname2.firstname = "Kelvins";
+  parentobjectname2.lastname = "Celcius";
+
+  cout << "My first name is " << parentobjectname2.firstname  << endl;
+  cout << "My last name is " << parentobjectname2.lastname  << endl;
+  cout << "My age is " << parentobjectname2.age << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+// Child and Parent
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  public:
+    int age;
+    string firstname;
+    string lastname;
+
+    // Constructors with parameters
+
+    parentclassname(string x, string y, int z) {
+      firstname = x;
+      lastname = y;
+      age = z;
+      cout << "My age is " << z << endl;
+      cout << "This is an automatic function. " << endl;
+      cout << "My name is " << x << " " << y << endl;
+      cout << endl;
+    }
+
+};
+
+int main() {
+  parentclassname parentobjectname1("John", "Walker", 43);
+
+  parentobjectname1.age = 15;
+  parentobjectname1.firstname = "Joe";
+  parentobjectname1.lastname = "Doe";
+
+  // Print values
+  cout << "My first name is " << parentobjectname1.firstname  << endl;
+  cout << "My last name is " << parentobjectname1.lastname  << endl;
+  cout << "My age is " << parentobjectname1.age << endl;
+
+  cout << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  public:
+    int age;
+    string firstname;
+    string lastname;
+
+    // Constructors with parameters
+
+    parentclassname(string x, string y, int z) {
+      firstname = x;
+      lastname = y;
+      age = z;
+      cout << "My age is " << z << endl;
+      cout << "This is an automatic function. " << endl;
+      cout << "My name is " << x << " " << y << endl;
+      cout << endl;
+    }
+
+};
+
+int main() {
+  parentclassname parentobjectname1("John", "Walker", 43);
+
+  parentobjectname1.age = 15;
+  parentobjectname1.firstname = "Joe";
+  parentobjectname1.lastname = "Doe";
+
+  // Print values
+  cout << "My first name is " << parentobjectname1.firstname  << endl;
+  cout << "My last name is " << parentobjectname1.lastname  << endl;
+  cout << "My age is " << parentobjectname1.age << endl;
+
+  cout << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  /* public - members are accessible from outside the class
+  private - members cannot be accessed (or viewed) from outside the class
+  protected - members cannot be accessed from outside the class, however, they can be accessed in inherited classes. You will learn more about Inheritance later. */
+
+  public:
+    string name;
+    int age;
+  private:
+    string privatename;
+    int privateage;
+};
+
+int main() {
+  parentclassname parentobjectname;
+  parentobjectname.age = 15;
+  parentobjectname.name = "someone";
+  cout << "This is accessible: " << parentobjectname.age << "  " << parentobjectname.name << endl;
+  cout << endl;
+
+  /* This will raise an error
+  parentobjectname.privateage = 20;
+  parentobjectname.privatename = "some other name";
+  cout << "This is accessible: " << parentobjectname.privateage << "  " << parentobjectname.privatename << endl;
+  cout << endl;
+  */
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  /* public - members are accessible from outside the class
+  private - members cannot be accessed (or viewed) from outside the class
+  protected - members cannot be accessed from outside the class, however, they can be accessed in inherited classes. You will learn more about Inheritance later. */
+
+  public:
+    string name;
+    int age;
+  private:
+    string privatename;
+    int privateage;
+};
+
+int main() {
+  parentclassname parentobjectname;
+  parentobjectname.age = 15;
+  parentobjectname.name = "someone";
+  cout << "This is accessible: " << parentobjectname.age << "  " << parentobjectname.name << endl;
+  cout << endl;
+
+  /* This will raise an error
+  parentobjectname.privateage = 20;
+  parentobjectname.privatename = "some other name";
+  cout << "This is accessible: " << parentobjectname.privateage << "  " << parentobjectname.privatename << endl;
+  cout << endl;
+  */
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+#include <string>
+using namespace std;
+
+class parentclassname {
+  /* public - members are accessible from outside the class
+  private - members cannot be accessed (or viewed) from outside the class
+  protected - members cannot be accessed from outside the class, however, they can be accessed in inherited classes. You will learn more about Inheritance later. */
+  private:
+    string privatename;
+
+  public:
+      void assignningprivatename(string name) {
+        privatename = name;
+      }
+      int accessingprivatename() {
+        //cout << "The assigned private name is " << privatename << endl;
+        return privatename;
+      }
+};
+
+int main() {
+  parentclassname parentobjectname;
+  parentobjectname.assignningprivatename("John Doe");
+  cout << parentobjectname.accessingprivatename();
+  //parentobjectname.accessingprivatename();
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+using namespace std;
+
+class parentclassname {
+  private:
+    int age;
+    string name;
+
+  public:
+    void setage(int a, string n) {
+      age = a;
+      name = n;
+    }
+    int getage() {
+      return age;
+    }
+
+    string getname() {
+      return name;
+    }
+};
+
+int main() {
+  parentclassname Obj1;
+  Obj1.setage(50000, "John Walker");
+  cout << Obj1.getage() << endl;
+  cout << Obj1.getname();
+  return 0;
+}
+
+
+/*
+#include <iostream>
+using namespace std;
+
+class parentclassname {
+  private:
+    string privatename;
+
+  public:
+    void setname(string temp) {
+      privatename = temp;
+    }
+    int getname() {
+      return privatename;
+    }
+};
+
+int main() {
+  parentclassname Obj1;
+  Obj1.setname("John Doe");
+  cout << Obj1.getname();
+  return 0;
+}
+*/
+
+________________________________________________________________________________
+// Class and Object
+#include <iostream>
+using namespace std;
+
+class parentclassname {
+  private:
+    int age;
+    string name;
+
+  public:
+    void setage(int a, string n) {
+      age = a;
+      name = n;
+    }
+    int getage() {
+      return age;
+    }
+
+    string getname() {
+      return name;
+    }
+};
+
+int main() {
+  parentclassname Obj1;
+  Obj1.setage(50000, "John Walker");
+  cout << Obj1.getage() << endl;
+  cout << Obj1.getname();
+  return 0;
+}
+________________________________________________________________________________
+// Inheritance Concept
+#include <iostream>
+using namespace std;
+
+class parentclassname {
+  public:
+    string name = "John Doe";
+    int age = 23;
+    void func1() {
+      cout << "This is a function" << endl;
+    }
+};
+
+class childclassname: public parentclassname {
+  public:
+    string hobby = "coding";
+};
+
+int main() {
+  childclassname object1;
+  object1.func1();
+  cout << "My name is " << object1.name << endl;
+  cout << "My hobby is " << object1.hobby << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+using namespace std;
+
+class parentclassname {
+  public:
+    string name = "John Doe";
+    int age = 23;
+    void func1() {
+      cout << "This is a function" << endl;
+    }
+};
+
+class childclassname: public parentclassname {
+  public:
+    string hobby = "coding";
+};
+
+int main() {
+  childclassname object1;
+  object1.func1();
+  cout << "My name is " << object1.name << endl;
+  cout << "My hobby is " << object1.hobby << endl;
+
+  return 0;
+}
+________________________________________________________________________________
+// Polymorphism
+#include <iostream>
+using namespace std;
+
+class parentclassname {
+  public:
+    string name = "John Doe";
+    void func1() {
+      cout << "This is a parent function" << endl;
+    }
+};
+
+class childclassname1: public parentclassname {
+  public:
+    void func1() {
+      cout << "This is a child1 function" << endl;
+    }
+};
+
+class childclassname2: public parentclassname {
+  public:
+    void func1() {
+      cout << "This is a child2 function" << endl;
+    }
+};
+
+int main() {
+  parentclassname object1;
+  childclassname1 object2;
+  childclassname2 object3;
+
+  object1.func1();
+  object2.func1();
+  object3.func1();
+
+  return 0;
+}
+________________________________________________________________________________
+// C++ Files Handling
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+/*
+ofstream	Creates and writes to files
+ifstream	Reads from files
+fstream	A combination of ofstream and ifstream: creates, reads, and writes to files
+*/
+
+int main() {
+  /* First Step
+  // Creating the files
+  ofstream objectname("test.txt");
+
+  // Write to the files
+  objectname << "This is the first text that I would like to write using the c++ code.";
+
+  // It is always a good practice to close the files
+  objectname.close();
+  */
+
+  // Second Step
+  string variablename;
+
+  ifstream objectname("test.txt");
+
+  while(getline(objectname, variablename)) {
+    cout << variablename;
+  }
+
+  objectname.close();
+
+  return 0;
+}
+________________________________________________________________________________
+// Try and Catch
+#include <iostream>
+
+using namespace std;
+
+
+int main() {
+  int age = 30;
+  try {
+    if (age >= 20) {
+      cout << "Your age is larger than 20.";
+      cout << endl << age << endl;
+    } else {
+      throw (age);
+    }
+  }
+
+  catch (int anothervariable) {
+    cout << "The value of age is assumed by the another variable name, as you can see here:" << endl;
+    cout << "Anothervairable: " << anothervariable << endl;
+    cout << age;
+  }
+
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+
+using namespace std;
+
+
+int main() {
+  int age = 15;
+  try {
+    if (age >= 20) {
+      cout << "Your age is larger than 20.";
+      cout << endl << age << endl;
+    } else {
+      throw 21;
+    }
+  }
+
+  catch (int anothervariable) {
+    cout << "The value of age is assumed by the another variable name, as you can see here:" << endl;
+    cout << "Anothervairable: " << anothervariable << endl;
+    cout << age;
+  }
+
+
+  return 0;
+}
+________________________________________________________________________________
+#include <iostream>
+
+using namespace std;
+
+
+int main() {
+  int age = 15;
+  try {
+    if (age >= 20) {
+      cout << "Your age is larger than 20.";
+      cout << endl << age << endl;
+    } else {
+      throw "21";
+    }
+  }
+  // You can throw any type of variables, if you are unsure use the three dots at the statement below
+  catch (...) {
+    cout << "The value of age is assumed by the another variable name, as you can see here:" << endl;
+    cout << "Anothervairable: " << endl << endl;
+    cout << age;
+  }
+
+
+  return 0;
+}
+__________________________________________________________________________________________________________
+#include <iostream>
+
+using namespace std;
+
+
+int main() {
+  int age = 15;
+  try {
+    if (age >= 20) {
+      cout << "Your age is larger than 20.";
+      cout << endl << age << endl;
+    } else {
+      throw "21";
+    }
+  }
+  // You can throw any type of variables, if you are unsure use the three dots at the statement below
+  catch (...) {
+    cout << "The value of age is assumed by the another variable name, as you can see here:" << endl;
+    cout << "Anothervairable: " << endl << endl;
+    cout << age;
+  }
+
+
+  return 0;
+}
